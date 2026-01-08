@@ -1,7 +1,10 @@
 # algorithm-study
 This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
 
-### 컨트롤 + 옵션 + N
+ios::sync_with_stdio(0);
+cin.tie(0);
+
+control + option + N
 
 ### 리다이렉션 방법
 +  g++ main.cpp -o main
@@ -12,3 +15,4 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ### 파일 리다이렉션 방법
 freopen("input.txt","r",stdin);
 freopen("output.txt","w", stdout);
+
