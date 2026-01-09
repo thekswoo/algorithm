@@ -1,6 +1,7 @@
 #include <iostream>
 #include <utility>
 #include <queue>
+#include <algorithm>
 using namespace std;
 
 #define X first
@@ -34,10 +35,11 @@ int main() {
       if(board[i][j] == 0 || vis[i][j] == 1) continue;
       queue<pair<int, int> > Q;
       vis[i][j] = 1;
-      int board_size = 1;
+      int board_size = 0;
       Q.push({i,j});
       while(!Q.empty()) {
         pair<int, int> cur = Q.front();
+        board_size++;
         Q.pop();
 
         for(int dir = 0; dir < 4; dir++) {
@@ -47,13 +49,12 @@ int main() {
           if(nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
           if(vis[nx][ny] == 1 || board[nx][ny] == 0) continue;
 
-          board_size++;
           vis[nx][ny] = 1;
           Q.push({nx,ny});
         }
       }
       count_board++;
-      if(board_size > maximum_size) maximum_size = board_size;
+      maximum_size = max(maximum_size, board_size);
     }
   }
 
