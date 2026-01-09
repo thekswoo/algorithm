@@ -21,9 +21,9 @@ cin.tie(0); <br>
 ### 입출력 리다이렉션
 ---
 -  터미널 활용 <br>
-g++ main.cpp -o main
+g++ -std=c++17 main.cpp -o main
 ./main < input.txt > output.txt <br>
-g++ main.cpp -o main && ./main < input.txt > output.txt <br>
+g++ -std=c++17 main.cpp -o main && ./main < input.txt > output.txt <br>
 
 -  소스 코드내 삽입 <br>
 freopen("input.txt","r",stdin); <br>
